@@ -1,0 +1,14 @@
+myDamage = 5;
+
+debris01 = obj_Debris_Glass_01;
+debris02 = obj_Debris_Glass_02;
+debris03 = obj_Debris_Glass_03;
+
+impact = snd_Impact_Glass;
+shatter = snd_Shatter_Glass;
+
+isTapped = false;
+isActive = false;
+alarm[0] = 30;
+
+myParticle = particle_Glass;

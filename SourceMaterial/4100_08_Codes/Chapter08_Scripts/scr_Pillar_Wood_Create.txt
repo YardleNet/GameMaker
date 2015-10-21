@@ -1,0 +1,13 @@
+myDamage = 16;
+debris01 = obj_Debris_Wood_01;
+debris02 = obj_Debris_Wood_02;
+debris03 = obj_Debris_Wood_03;
+
+impact = snd_Impact_Wood;
+shatter = snd_Shatter_Wood;
+
+isTapped = false;
+isActive = false;
+alarm[0] = 30;
+
+myParticle = particle_Wood;

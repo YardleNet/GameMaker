@@ -1,0 +1,14 @@
+if (global.lastRoom == global.portalA)
+{
+    obj_Player.x = obj_Portal_A_Start.x;
+    obj_Player.y = obj_Portal_A_Start.y;
+} else if (global.lastRoom == global.portalB) {
+    obj_Player.x = obj_Portal_B_Start.x;
+    obj_Player.y = obj_Portal_B_Start.y;
+} else if (global.lastRoom == global.portalC) {
+    obj_Player.x = obj_Portal_C_Start.x;
+    obj_Player.y = obj_Portal_C_Start.y;
+} else if (global.lastRoom == global.portalD) {
+    obj_Player.x = obj_Portal_D_Start.x;
+    obj_Player.y = obj_Portal_D_Start.y;
+} 

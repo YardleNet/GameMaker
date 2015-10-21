@@ -1,0 +1,2 @@
+x = myLaserCannon.x;
+y = myLaserCannon.y;

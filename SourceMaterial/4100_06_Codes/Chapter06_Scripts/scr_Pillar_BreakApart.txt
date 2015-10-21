@@ -1,0 +1,35 @@
+if (isActive)
+{
+    if (abs(other.phy_linear_velocity_x) > myDamage || abs(other.phy_linear_velocity_y) > myDamage)
+    {
+        if (phy_mass <= other.phy_mass)
+        {     
+            p1 =instance_create(x, y, debris01);
+            p1.phy_speed_x = phy_speed_x;
+            p1.phy_speed_y = phy_speed_y;
+            p1.phy_rotation = phy_rotation;
+            
+            p2 =instance_create(x, y, debris02);
+            p2.phy_speed_x = phy_speed_x;
+            p2.phy_speed_y = phy_speed_y;
+            p2.phy_rotation = phy_rotation;
+            
+            p3 =instance_create(x, y, debris03);
+            p3.phy_speed_x = phy_speed_x;
+            p3.phy_speed_y = phy_speed_y;
+            p3.phy_rotation = phy_rotation;
+            
+            sound_play(shatter);
+            
+            instance_destroy();
+        } 
+        else 
+        {
+            if (!isTapped)
+            {
+                sound_play(impact);
+                isTapped = true;
+            }
+        }
+    } 
+}

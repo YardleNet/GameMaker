@@ -1,0 +1,9 @@
+mySpeed = 2;
+canGrow = false;
+isBig = false;
+isAttacking = false;
+image_speed = 0.5;
+sound_play(snd_Brawl);
+sound_loop(snd_Brawl);
+path_start(pth_Brawl_01, mySpeed, 1, true);
+

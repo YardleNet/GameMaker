@@ -1,0 +1,5 @@
+placeY = irandom_range(80, room_height - 80);
+instance_create(room_width - 32, placeY, obj_FloatBot);
+instance_create(room_width - 64,placeY - 32, obj_FloatBot);
+instance_create(room_width - 64, placeY + 32, obj_FloatBot);
+

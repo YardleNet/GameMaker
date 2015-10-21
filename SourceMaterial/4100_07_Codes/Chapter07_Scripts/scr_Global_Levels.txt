@@ -1,0 +1,27 @@
+globalvar level, totalLevels;
+level[0, 0] = Level_01;
+level[0, 1] = false;
+level[1, 0] = Level_02;
+level[1, 1] = true;
+level[2, 0] = Level_03;
+level[2, 1] = true;
+level[3, 0] = Level_04;
+level[3, 1] = true;
+level[4, 0] = Level_05;
+level[4, 1] = true;
+level[5, 0] = Level_06;
+level[5, 1] = true;
+level[6, 0] = Level_07;
+level[6, 1] = true;
+level[7, 0] = Level_08;
+level[7, 1] = true;
+level[8, 0] = Level_09;
+level[8, 1] = true;
+level[9, 0] = Level_10;
+level[9, 1] = true;
+level[10, 0] = Level_11;
+level[10, 1] = true;
+level[11, 0] = Level_12;
+level[11, 1] = true;
+totalLevels = 12;
+

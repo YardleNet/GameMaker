@@ -1,0 +1,5 @@
+globalvar yellow, orange, fireWhite, smokeBlack;
+yellow = make_color_rgb(249, 170, 0);
+orange = make_color_rgb(255, 72, 12);
+fireWhite = make_color_rgb(255, 252, 206);
+smokeBlack = make_color_rgb(24, 6, 0);

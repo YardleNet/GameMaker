@@ -1,0 +1,9 @@
+levelCompleted = ds_grid_value_x(levelData, 0, LEVEL, totalLevels-1, LEVEL, room )
+for (i = 0; i < ds_grid_width(equip); i += 1)
+{
+    equipUsed = abs(ds_grid_get(obj_Menu.startEquip, i, AMOUNT) - ds_grid_get(equip, i, AMOUNT));
+    ds_grid_set(levelData, levelCompleted, i, equipUsed);   
+}
+levelScore = obj_Menu.tempScore - obj_Menu.tempCost
+ds_grid_set(levelData, levelCompleted, LVLSCORE, levelScore);
+scr_Analytics_Init();

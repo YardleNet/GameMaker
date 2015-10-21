@@ -1,0 +1,17 @@
+if (isTriggered)
+{
+    if (instance_exists(obj_TNT))
+    {
+        with(obj_TNT) { scr_TNT_Activate(); }
+    }
+    if (instance_exists(obj_Anchor))
+    {
+        with(obj_Anchor) { scr_Anchor_Activate(); }
+    }
+    if (instance_exists(obj_CraneBase))
+    {
+        with(obj_CraneBase) { scr_CraneBase_Activate(); }
+    }
+    alarm[0] = 8 * room_speed;
+    isTriggered = false;
+}

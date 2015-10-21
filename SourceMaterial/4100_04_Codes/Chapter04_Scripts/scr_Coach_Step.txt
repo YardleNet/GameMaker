@@ -1,0 +1,66 @@
+if (direction > 45 && direction <= 135) { sprite_index = spr_Coach_WalkUp; }
+else if (direction > 135 && direction <= 225) { sprite_index = spr_Coach_WalkLeft; }
+else if (direction > 225 && direction <= 315) { sprite_index = spr_Coach_WalkDown; }
+else { sprite_index = spr_Coach_WalkRight; }
+
+targetDist = distance_to_object(obj_Player);
+if (targetDist < 150  && targetDist > 16)
+{
+    canSee = collision_line(x, y, obj_Player.x, obj_Player.y, obj_Wall, false, false)
+    if (canSee == noone)
+    {
+        path_end();
+        mp_potential_step(obj_Player.x, obj_Player.y, 4, all);
+        isChasing = true;
+    }
+    else if (canSee != noone && isChasing == true)
+    {
+        alarm[0] = 60;
+        isWaiting = true;
+        isChasing = false;
+    }
+}
+else if (targetDist <= 16)
+{
+    if (isAttacking == false)
+    {
+        swing = instance_create(x, y, obj_Coach_Attack);
+        swing.image_angle = direction;
+        alarm[1] = 90;
+        isAttacking = true;
+    }
+}
+else 
+{
+    if (isWaiting == false)
+    {
+        if (distance_to_object(target) <= 8)
+        {
+            alarm[0] = 60;
+            path_end();
+            isWaiting = true;
+        }
+        if (isAvoiding == true)
+        {
+            mp_potential_step(target.x, target.y, 4, all);
+        }
+        if (distance_to_object(obj_Coach) <= 32 && isAvoiding == false)
+        {
+            path_end();
+            isAvoiding = true;
+        }
+        else if (distance_to_object(obj_Coach) > 32 && isAvoiding == true)
+        {
+            mp_grid_path(myPathGrid, myPath, x, y, target.x, target.y, false);
+            path_start(myPath, mySpeed, 1, true);
+            isAvoiding = false;
+        }
+    }
+}
+if (place_meeting(x, y, obj_Coach))
+{
+    x = xprevious;
+    y = yprevious;
+    mp_potential_step(target.x, target.y, 4, all);
+}
+

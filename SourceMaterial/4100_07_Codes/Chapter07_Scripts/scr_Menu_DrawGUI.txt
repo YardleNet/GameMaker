@@ -1,0 +1,15 @@
+draw_sprite(spr_Menu_BG, 0, 0, 400);
+if (isGameActive)
+{
+    win_X = window_mouse_get_x();
+    win_Y = window_mouse_get_y();
+    
+    for (i = 0; i < ds_list_size(inventory); i++)
+    {
+        scr_Menu_Equipment(i, ds_list_find_value(inventory, i));
+    }
+    scr_Menu_Button_Restart();
+    scr_Menu_Button_Shop();
+    scr_Menu_Clock();
+}
+draw_set_font(-1);  

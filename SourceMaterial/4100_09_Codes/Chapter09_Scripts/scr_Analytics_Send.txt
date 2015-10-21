@@ -1,0 +1,10 @@
+for (a = 0; a < totalLevels; a++)
+{
+    levelName = room_get_name(ds_grid_get(levelData, a, LEVEL));
+    levelScore = ds_grid_get(levelData, a, LVLSCORE);
+    levelAttempt = ds_grid_get(levelData, a, ATTEMPTS);
+    usedTNT = ds_grid_get(levelData, a, TNT);
+    usedWB = ds_grid_get(levelData, a, WRECKINGBALL);
+    usedMagnet = ds_grid_get(levelData, a, MAGNET);
+    analytics_event_ext(levelName, "Level Score", levelScore, "Attempts", levelAttempt, "TNT Used", usedTNT, "WBalls Used", usedWB, "Magnets Used", usedMagnet);   
+}

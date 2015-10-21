@@ -1,0 +1,21 @@
+theFile = argument0;
+if (!file_exists(theFile))
+{
+    scr_GameSave(theFile); 
+} else {
+    ini_open(theFile);
+    score = ini_read_real("Score", "Cash", "");
+    for (i = 0; i < totalLevels; i++)
+    {
+        level[i, 1] = ini_read_string("Levels", string("Level_" + i), "");
+    }
+    for ( j = 0; j < ds_grid_width(equip); j++ )
+    {
+        ds_grid_set(equip, j, AMOUNT, ini_read_real("Equipment", string("Equip_" + j), ""));
+        if (ds_list_find_index(inventory, j) == -1 && ds_grid_get(equip, j, AMOUNT) > 0)
+        {
+            ds_list_add(inventory, j);
+        }
+    }   
+    ini_close();
+}

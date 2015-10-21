@@ -1,0 +1,4 @@
+if (obj_Boss.isPhase_03)
+{
+    with (other) { instance_destroy(); }
+}

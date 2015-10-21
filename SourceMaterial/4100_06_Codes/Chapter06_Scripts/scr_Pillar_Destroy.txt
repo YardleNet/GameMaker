@@ -1,0 +1,19 @@
+if (isActive)
+{
+    if (abs(other.phy_linear_velocity_x) > myDamage || abs(other.phy_linear_velocity_y) > myDamage)
+    { 
+        if (phy_mass < other.phy_mass)
+        { 
+            sound_play(shatter);
+            instance_destroy();
+        }        
+        else 
+        {
+            if (!isTapped)
+            {
+                sound_play(impact);
+                isTapped = true;
+            }
+        }
+    }
+}

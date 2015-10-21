@@ -1,0 +1,8 @@
+draw_set_color(c_black);
+draw_set_halign(fa_center);
+draw_set_font(fnt_Small);
+draw_text(320, 280, "Type In Your Name");
+draw_set_font(fnt_Large);
+draw_text(320, 300, playerName);
+draw_set_font(-1);
+

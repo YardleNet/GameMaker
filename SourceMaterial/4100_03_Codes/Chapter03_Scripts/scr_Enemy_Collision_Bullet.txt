@@ -1,0 +1,7 @@
+instance_create(x,y, obj_Explosion);
+score += 20;
+with (other)
+{
+    instance_destroy();
+}
+instance_destroy();

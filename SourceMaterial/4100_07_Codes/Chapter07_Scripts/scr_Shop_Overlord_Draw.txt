@@ -1,0 +1,17 @@
+draw_set_color(c_black);
+draw_set_halign(fa_center);
+
+for ( i = 0; i < ds_grid_width(equip); i++ )
+{
+    draw_sprite(ds_grid_get(equip, i, SPRITE), 0, 96, (96 * i) + 152);
+    draw_set_font(fnt_Small);
+    draw_text(116, (96 * i) + 166, ds_grid_get(equip, i, AMOUNT));
+    draw_set_font(fnt_Large);
+    draw_text(300, (96 * i) + 140, ds_grid_get(equip, i, COST));    
+}
+draw_set_color(yellow);
+draw_set_font(fnt_Medium);
+draw_text(96, 416, "Cash");
+draw_set_font(fnt_Large);
+draw_text(96, 440, score);
+draw_set_font(-1);

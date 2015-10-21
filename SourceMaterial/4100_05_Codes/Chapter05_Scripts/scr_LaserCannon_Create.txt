@@ -1,0 +1,10 @@
+myHealth = 20;
+mySpeed = 2;
+myBuffer = 64;
+action = IDLE;
+facing = RIGHT;
+canFire = false;
+
+myIdle = spr_LaserCannon_Idle;
+myRun = spr_LaserCannon_Run;
+myDamage = spr_LaserCannon_Damage;

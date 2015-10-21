@@ -1,0 +1,2 @@
+mySpeedX = 0;
+mySpeedY = 0;

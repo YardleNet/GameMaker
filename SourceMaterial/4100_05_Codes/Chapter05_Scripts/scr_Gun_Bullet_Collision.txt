@@ -1,0 +1,2 @@
+scr_Damage();
+instance_destroy();

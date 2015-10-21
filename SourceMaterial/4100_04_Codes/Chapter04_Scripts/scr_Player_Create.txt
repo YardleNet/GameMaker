@@ -1,0 +1,6 @@
+mySpeed = 4;
+myDirection = 0;
+isAttacking = false;
+isWalking = false;
+health = 100;
+image_speed = 0.5;

@@ -1,0 +1,17 @@
+column = 0;
+row = 1;
+for ( i = 0; i < totalLevels ; i++ )
+{
+    lvl = instance_create((72 * column) + 128, 80 * row + 128, obj_Button_LevelSelect);
+    lvl.myLevel = level[i, 0];
+    lvl.isLocked = level[i, 1];
+    lvl.myNum = (i + 1) ;
+    column++
+    if (column > 5)
+    { 
+        row++; 
+        column = 0;
+    }
+}
+instance_create(320, 440, obj_Button_Shop);
+

@@ -1,0 +1,6 @@
+if (isLocked)
+{
+    exit;
+} else {
+    room_goto(myLevel);
+}

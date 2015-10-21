@@ -1,0 +1,16 @@
+if (ds_list_size(inventory) == 0)
+{
+    room_goto(Shop);
+}
+isActive = false;
+timer = 10;
+isTimerStarted = false;
+menuItem_Zone = 32;
+menuItems_Y = 440;
+restartX = 468;
+shopX = 564;
+tempCost = 0;
+tempScore = 0;
+startEquip = ds_grid_create(3,4);
+ds_grid_copy(startEquip, equip);
+

@@ -1,0 +1,4 @@
+global.portalA = C04_R02;
+global.portalB = 0;
+global.portalC = 0;
+global.portalD = 0;

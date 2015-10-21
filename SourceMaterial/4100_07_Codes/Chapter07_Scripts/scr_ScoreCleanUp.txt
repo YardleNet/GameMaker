@@ -1,0 +1,18 @@
+with (obj_Menu)
+{
+    ds_grid_copy(equip, startEquip);
+    ds_grid_destroy(startEquip);
+    score += tempScore - tempCost;
+    for ( i = 0; i < ds_grid_width(equip); i++)
+    {
+        e = ds_grid_get(equip, i, AMOUNT);
+        
+        if (e == 0)
+        {
+            inv = ds_list_find_index(inventory, i);
+            ds_list_delete(inventory, inv);
+        }
+    }
+    scr_GameSave(saveFile);
+}
+

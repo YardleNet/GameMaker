@@ -1,0 +1,18 @@
+if (nameSpace < nameMax)
+{    
+    if (keyboard_key >= 65 && keyboard_key <= 90) 
+    {
+        playerName = playerName + chr(keyboard_key);
+        nameSpace++;
+    }
+}
+if (keyboard_key == vk_backspace)
+{  
+    lastLetter = string_length(playerName);
+    playerName = string_delete(playerName, lastLetter, 1)
+    if (nameSpace > 0)
+    {
+        nameSpace--;
+    }
+}
+

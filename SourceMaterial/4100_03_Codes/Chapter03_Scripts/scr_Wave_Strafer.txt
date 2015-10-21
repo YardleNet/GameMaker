@@ -1,0 +1,3 @@
+instance_create(room_width - 64, room_height/2 - 64, obj_Strafer);
+instance_create(room_width - 64, room_height/2 + 64, obj_Strafer);
+

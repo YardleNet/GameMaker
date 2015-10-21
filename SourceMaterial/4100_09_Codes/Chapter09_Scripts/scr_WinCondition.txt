@@ -1,0 +1,9 @@
+with (obj_Zone_Parent)
+{
+    if (isTouching)
+    {
+        return false;
+    }
+}
+scr_Level_Stats();
+return true;

@@ -1,0 +1,6 @@
+draw_self();
+draw_set_color(c_black);
+draw_set_font(fnt_Large);
+draw_set_halign(fa_center);
+draw_text(x, y-12, myNum);
+draw_set_font(-1);

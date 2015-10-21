@@ -1,0 +1,13 @@
+isGameActive = false;
+obj_Menu.isActive = true;
+isVictory = scr_WinCondition();
+screenX = 320;
+screenY = 200;
+menuItem_Zone = 32;
+menuItems_Y = 440;
+restartX = 200;
+shopX = 320;
+nextLevelX = 440;
+postfb_Y = 340;
+postfb_OffsetW = 64;
+postfb_OffsetH = 16;

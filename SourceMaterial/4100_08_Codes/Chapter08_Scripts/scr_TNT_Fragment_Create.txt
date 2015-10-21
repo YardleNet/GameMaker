@@ -1,0 +1,6 @@
+mySpeedX = 0;
+mySpeedY = 0;
+
+myEmitter = part_emitter_create(system);
+part_emitter_region(system, myEmitter, x-5, x+5, y-5, y+5, ps_shape_ellipse, ps_distr_linear);
+part_emitter_stream(system, myEmitter, particle_FireWhite, 5);

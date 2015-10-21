@@ -1,0 +1,2 @@
+myRange = 100;
+hasSpawned = false;

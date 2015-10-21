@@ -1,0 +1,10 @@
+y -= 1;
+fadeOut++;
+if (fadeOut > 60) { alpha -= 0.05; }
+if (alpha <= 0) { instance_destroy(); }
+draw_set_color(c_black);
+draw_set_font(fnt_Small);
+draw_set_alpha(alpha)
+draw_text(x, y, myValue);
+draw_set_alpha(1)
+

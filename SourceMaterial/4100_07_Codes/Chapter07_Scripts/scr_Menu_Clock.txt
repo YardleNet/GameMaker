@@ -1,0 +1,14 @@
+draw_set_color(yellow);
+if (isTimerStarted)
+{
+    draw_set_font(fnt_Small);
+    draw_text(320,416,"COUNTDOWN");
+    draw_set_font(fnt_Large);
+    draw_text(320,436, timer);
+} else {
+    draw_set_font(fnt_Small);
+    draw_text(320,416,"PRESS SPACE TO");
+    
+    draw_set_font(fnt_Large);
+    draw_text(320,436,"DESTROY")
+}

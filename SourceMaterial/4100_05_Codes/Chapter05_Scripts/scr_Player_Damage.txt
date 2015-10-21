@@ -1,0 +1,6 @@
+if (isOnGround)
+{
+    isDamaged = false;
+} else {
+    scr_Gravity();
+}

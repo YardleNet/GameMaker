@@ -1,0 +1,2 @@
+if (instance_exists(cannonA)) { cannonA.canFire = true; }
+if (instance_exists(cannonC)) { cannonC.canFire = true; }

@@ -1,0 +1,8 @@
+if locked
+{
+    exit;
+} else {
+    currentLevel = ds_grid_value_x(levelData, 0, LEVEL, totalLevels-1, LEVEL, myLevel);
+    ds_grid_add(levelData, currentLevel, ATTEMPTS, 1);
+    room_goto(myLevel);
+}

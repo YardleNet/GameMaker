@@ -1,0 +1,14 @@
+globalvar equip;
+equip = ds_grid_create(3, 4);
+ds_grid_set(equip, TNT, SPRITE, spr_Menu_TNT);
+ds_grid_set(equip, TNT, OBJECT, obj_Ghost_TNT);
+ds_grid_set(equip, TNT, AMOUNT, 1);
+ds_grid_set(equip, TNT, COST, 100);
+ds_grid_set(equip, WRECKINGBALL, SPRITE, spr_Menu_WreckingBall);
+ds_grid_set(equip, WRECKINGBALL, OBJECT, obj_Ghost_WreckingBall);
+ds_grid_set(equip, WRECKINGBALL, AMOUNT, 0);
+ds_grid_set(equip, WRECKINGBALL, COST, 1000);
+ds_grid_set(equip, MAGNET, SPRITE, spr_Menu_MagneticCrane);
+ds_grid_set(equip, MAGNET, OBJECT, obj_Ghost_MagneticCrane);
+ds_grid_set(equip, MAGNET, AMOUNT, 0);
+ds_grid_set(equip, MAGNET, COST, 3000);

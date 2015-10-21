@@ -1,0 +1,7 @@
+mySpeed = 2;
+myRange = 150;
+myBooks = 0;
+isDissolving = false;
+image_speed = 0.3;
+alarm[0] = 6;
+

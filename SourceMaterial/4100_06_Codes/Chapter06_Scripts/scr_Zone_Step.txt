@@ -1,0 +1,8 @@
+if (collision_rectangle(bbox_left, bbox_top, bbox_right , bbox_bottom, obj_Pillar_Parent, false, false))
+{
+    image_index = 0;
+    isTouching = true;
+} else {
+    image_index = 1;
+    isTouching = false;
+}

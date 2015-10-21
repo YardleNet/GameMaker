@@ -1,0 +1,6 @@
+bullet = instance_create(x, y, obj_Bullet_03);
+if ( instance_exists( obj_Player ) )
+{
+    bullet.direction = point_direction(x, y, obj_Player.x, obj_Player.y);
+} 
+alarm[0] = random(30) + 15;

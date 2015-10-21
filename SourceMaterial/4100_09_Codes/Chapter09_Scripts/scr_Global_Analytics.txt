@@ -1,0 +1,13 @@
+globalvar levelData;
+levelData = ds_grid_create(totalLevels, 6);
+for (i = 0; i < totalLevels; i++)
+{
+    ds_grid_set(levelData, i, TNT, 0);
+    ds_grid_set(levelData, i, WRECKINGBALL, 0);
+    ds_grid_set(levelData, i, MAGNET, 0);
+    ds_grid_set(levelData, i, LEVEL, level[i, 0]);
+    ds_grid_set(levelData, i, ATTEMPTS, 0);
+    ds_grid_set(levelData, i, LVLSCORE, 0);
+}
+scr_Analytics_Init();
+

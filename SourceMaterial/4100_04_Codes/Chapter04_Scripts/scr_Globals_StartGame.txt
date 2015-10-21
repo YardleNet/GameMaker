@@ -1,0 +1,5 @@
+global.portalA = 0;
+global.portalB = 0;
+global.portalC = 0;
+global.portalD = 0;
+global.lastRoom = C04_R01;

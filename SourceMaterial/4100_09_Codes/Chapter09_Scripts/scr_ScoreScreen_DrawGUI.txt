@@ -1,0 +1,23 @@
+draw_sprite(spr_Screen_BG, 0, screenX, screenY);
+
+draw_set_color(c_black);
+draw_set_halign(fa_center);
+draw_set_font(fnt_Large);
+draw_text(screenX, 60, room_get_name(room));
+draw_text(screenX, 144, obj_Menu.tempScore);
+draw_text(screenX, 204, obj_Menu.tempCost);
+draw_text(screenX, 284, obj_Menu.tempScore - obj_Menu.tempCost);
+
+draw_set_font(fnt_Medium);
+draw_text(screenX, 120, "Damage Estimate:");
+draw_text(screenX, 180, "Equipment Cost: ");
+draw_text(screenX, 260, "Total Profit: ");
+draw_set_font(-1);
+
+win_X = window_mouse_get_x();
+win_Y = window_mouse_get_y();
+scr_Menu_Button_Restart();
+scr_Menu_Button_Shop();
+scr_Menu_Button_NextLevel();
+scr_Menu_Button_FbPost();
+

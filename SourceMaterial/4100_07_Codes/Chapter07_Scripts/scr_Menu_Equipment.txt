@@ -1,0 +1,29 @@
+slot = argument0;
+item = argument1;
+
+if (slot == 0) { myX = 40; }
+if (slot == 1) { myX = 104; }
+if (slot == 2) { myX = 168; }
+
+draw_sprite(ds_grid_get(startEquip, item, SPRITE), 0, myX, menuItems_Y);
+if (!isActive)
+{   
+    if (win_Y > menuItems_Y - menuItem_Zone && win_Y < menuItems_Y + menuItem_Zone)
+    {
+        if (win_X > myX - menuItem_Zone && win_X < myX + menuItem_Zone) 
+        {
+            draw_sprite(ds_grid_get(startEquip, item, SPRITE), 1, myX, menuItems_Y);
+            if (mouse_check_button_pressed(mb_left) && ds_grid_get(startEquip, item, AMOUNT) > 0)
+            {        
+                instance_create(myX, menuItems_Y, ds_grid_get(startEquip, item, OBJECT));
+                ds_grid_add(startEquip, item, AMOUNT, -1);
+                tempCost += ds_grid_get(startEquip, item, COST);
+                isActive = true;
+            }
+        }
+    }
+}
+draw_set_color(c_black);
+draw_set_halign(fa_center);
+draw_set_font(fnt_Small);
+draw_text(myX + 20, menuItems_Y + 14, ds_grid_get(startEquip, item, AMOUNT));

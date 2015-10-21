@@ -1,0 +1,3 @@
+myDamage = 20;
+myLaserCannon = 0;
+image_xscale = room_width / 8;

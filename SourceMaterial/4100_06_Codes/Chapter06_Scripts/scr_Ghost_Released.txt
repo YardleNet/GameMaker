@@ -1,0 +1,8 @@
+winHeight = window_get_height();
+winMouse = window_mouse_get_y();
+if (!place_meeting(x, y, obj_Pillar_Parent) &&  winMouse < winHeight-64)
+{
+    instance_create(x, y, myTool);
+    obj_Menu.isActive = false;
+    instance_destroy();
+}

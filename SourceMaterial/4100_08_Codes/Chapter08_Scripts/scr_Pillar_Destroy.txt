@@ -1,0 +1,24 @@
+if (isActive)
+{
+    if (abs(other.phy_linear_velocity_x) > myDamage || abs(other.phy_linear_velocity_y) > myDamage)
+    { 
+        if (phy_mass < other.phy_mass)
+        { 
+            sound_play(shatter);
+            scoreFloat = instance_create(x, y, obj_ScoreFloat);
+            scoreFloat.myValue = floor(phy_mass);
+            obj_Menu.tempScore += scoreFloat.myValue;
+            scr_Particle_DustCloud();
+            instance_destroy();
+        }        
+        else 
+        {
+            if (!isTapped)
+            {
+                sound_play(impact);
+                isTapped = true;
+            }
+        }
+    }
+}
+ 

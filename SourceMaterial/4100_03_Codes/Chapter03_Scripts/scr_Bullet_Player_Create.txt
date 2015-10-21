@@ -1,0 +1,2 @@
+hspeed = 16;
+sound_play(snd_Bullet_01);

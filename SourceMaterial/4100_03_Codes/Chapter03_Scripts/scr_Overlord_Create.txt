@@ -1,0 +1,14 @@
+timeline_index = tm_Wave_Spawning;
+timeline_running = true;
+timeline_loop = true;
+
+lives = 3;
+isVictory = false;
+isDefeat = false;
+
+alarm[0] = 2700;
+
+sound_play(snd_Music);
+sound_loop(snd_Music);
+volume = 1;
+sound_global_volume(volume);

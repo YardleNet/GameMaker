@@ -1,0 +1,12 @@
+if (obj_Player.action != DAMAGE)
+{
+    health -= myDamage;
+    with (obj_Player) 
+    { 
+        y -= 1;
+        vspeed = -MAXGRAVITY;
+        hspeed = 8 * -facing;
+        action = DAMAGE;
+        isDamaged = true; 
+    }
+}

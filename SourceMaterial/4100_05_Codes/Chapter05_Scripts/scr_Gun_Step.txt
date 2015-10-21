@@ -1,0 +1,15 @@
+scr_Animation_Control();
+
+if (image_index > image_number-1)
+{
+    action = IDLE;
+}
+
+if (canFire) 
+{
+    action = RUN;
+    alarm[1] = 5;
+    canFire = false;
+}
+
+image_angle = point_direction(x, y, obj_Player.x, obj_Player.y);

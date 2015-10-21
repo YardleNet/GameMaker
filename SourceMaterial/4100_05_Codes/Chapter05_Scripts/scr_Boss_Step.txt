@@ -1,0 +1,20 @@
+if (!instance_exists(obj_Cannon) && !isPhase_02)
+{
+    laser.vspeed = laser.mySpeed;
+    timeline_index = tm_Boss_Phase02;
+    timeline_position = 0;
+    gun.delay = 45;
+    isPhase_02 = true;
+}
+if (!instance_exists(obj_LaserCannon) && !isPhase_03)
+{
+    timeline_index = tm_Boss_Phase03;
+    timeline_position = 0;
+    isPhase_03 = true;
+}
+if (!instance_exists(obj_BossCore) && !isBossDefeated)
+{
+    timeline_running = false;
+    with (gun) { instance_destroy(); }
+    isBossDefeated = true;
+}

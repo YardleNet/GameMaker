@@ -1,0 +1,4 @@
+if (y >= sprite_height)
+{
+    y -= mySpeed;
+}

@@ -1,0 +1,13 @@
+draw_sprite(spr_Button_Start, 0, startX, startY);
+if (win_Y > startY - start_ZoneHeight && win_Y < startY + start_ZoneHeight)
+{
+    if (win_X > startX - start_ZoneWidth && win_X < startX + start_ZoneWidth)
+    {
+        draw_sprite(spr_Button_Start, 1, startX, startY);
+        if (mouse_check_button_pressed(mb_left)) 
+        {        
+            isGameActive = true;
+            instance_destroy();
+        }
+    }
+}

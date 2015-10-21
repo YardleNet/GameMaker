@@ -1,0 +1,19 @@
+if (phy_active)
+{
+    if (instance_exists(obj_Pillar_Steel_Small))
+    {
+        with (obj_Pillar_Steel_Small)
+        {
+            if (!isCollected)
+            {
+                myMagnet = instance_nearest(x,y,obj_Magnet)
+                myDist = point_distance(phy_position_x, phy_position_y, myMagnet.x, myMagnet.y);
+                myDir = point_direction(phy_position_x, phy_position_y, myMagnet.x, myMagnet.y);
+                if (myDist < 200 && myDir > 60 && myDir < 120)
+                {
+                    physics_apply_impulse(x, y, 0, -2000)
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+health -= 5;
+myBooks.hasSpawned = false;
+instance_create(x, y, obj_Ghost_Dead);
+instance_destroy();

@@ -1,0 +1,6 @@
+myX = x + lengthdir_x(tipOfGun, image_angle);
+myY = y + lengthdir_y(tipOfGun, image_angle);
+bullet = instance_create(myX, myY, obj_Gun_Bullet);
+bullet.speed = 16;
+bullet.direction = image_angle;
+alarm[0] = delay;

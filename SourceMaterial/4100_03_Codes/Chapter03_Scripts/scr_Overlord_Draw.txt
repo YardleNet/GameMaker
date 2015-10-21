@@ -1,0 +1,23 @@
+draw_set_color(c_white);
+draw_set_font(fnt_Scoreboard);
+
+draw_set_halign(fa_left);
+if ( lives >= 0 )
+{
+    draw_text(8, 0, "Lives: " + string(lives));
+} else {
+    draw_text(8, 0, "Lives: " );
+}
+draw_set_halign(fa_right);
+draw_text(room_width-8, 0, "SCORE: " + string(score));
+
+draw_set_font(fnt_WinLose);
+draw_set_halign(fa_center);
+if ( isVictory == true )
+{
+    draw_text(room_width / 2, room_height/2, "VICTORY");
+}
+if ( disDefeat == true )
+{
+    draw_text(room_width / 2, room_height/2, "DEFEAT");
+}

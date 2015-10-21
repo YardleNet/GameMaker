@@ -1,0 +1,3 @@
+if (isShielding && y < ystart) { y += mySpeed; }
+if (!isShielding && y > openPosition) { y -= mySpeed; }
+

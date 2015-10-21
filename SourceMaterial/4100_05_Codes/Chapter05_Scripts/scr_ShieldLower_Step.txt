@@ -1,0 +1,2 @@
+if (isShielding && y > ystart) { y -= 2; }
+if (!isShielding && y < openPosition) { y += 2; }

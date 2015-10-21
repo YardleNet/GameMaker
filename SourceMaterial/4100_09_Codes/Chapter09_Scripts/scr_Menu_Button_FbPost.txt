@@ -1,0 +1,24 @@
+if (isVictory)
+{
+    status = facebook_status()
+    if (status == "AUTHORISED")
+    {
+        draw_sprite(spr_Button_FacebookPost, 0, screenX, postfb_Y);
+        if ((win_Y > postfb_Y - postfb_OffsetH && win_Y < postfb_Y + postfb_OffsetH))
+        {
+            if ((win_X > screenX - postfb_OffsetW && win_X < screenX + postfb_OffsetW)) 
+            {
+                draw_sprite(spr_Button_FacebookPost, 1, screenX, postfb_Y);
+                if (mouse_check_button_pressed(mb_left)) 
+                {
+                    myTitle = "Destruct";
+                    myCaption = "Play this game at yournamesite.com"
+                    myText = "I just destroyed the " + room_get_name(room) + " Towers playing Destruct!";    
+                    myImage = "http://yoursitename.com/Destruct/Thumbnail.gif"; 
+                    mySite = "http://yoursitename.com/Destruct/"      
+                    facebook_post_message(myTitle, myCaption, myText, myImage , mySite, "", "");                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+speed = 20;
+direction = 180;
+sound_play(snd_Bullet_Strafer);

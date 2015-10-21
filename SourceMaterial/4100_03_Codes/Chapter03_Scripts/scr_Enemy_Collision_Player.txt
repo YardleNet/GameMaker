@@ -1,0 +1,14 @@
+instance_create(x,y, obj_Explosion);
+with (other) 
+{
+    if ( lives > 0 )
+    {
+        instance_change(obj_Ghost, true);
+    }
+    else
+    {
+        instance_destroy();
+    }
+    lives -= 1;
+}
+instance_destroy();

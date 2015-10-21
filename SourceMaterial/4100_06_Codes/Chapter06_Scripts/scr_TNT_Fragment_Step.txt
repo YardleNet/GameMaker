@@ -1,0 +1,5 @@
+physics_apply_force(x, y, mySpeedX, mySpeedY);
+if (point_distance(x, y, xstart, ystart) > 128)
+{
+    instance_destroy();    
+}

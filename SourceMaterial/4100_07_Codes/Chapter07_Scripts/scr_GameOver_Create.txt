@@ -1,0 +1,2 @@
+gameOverText = "You ran out of money, better luck next time!";
+alarm[0] = 5 * room_speed;

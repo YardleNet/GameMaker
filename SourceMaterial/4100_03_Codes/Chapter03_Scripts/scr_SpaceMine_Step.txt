@@ -1,0 +1,12 @@
+if ( distance_to_object( obj_Player ) <= 200 && canFire == false)
+{
+    alarm[0] = 60;
+    sound_play(snd_Bullet_SpaceMine)
+    for ( i = 0; i < 8; i += 1)
+    {
+        bullet = instance_create(x,y,obj_Bullet_02);
+        bullet.direction = 45 * i;
+        bullet.hspeed -= 2;
+    }
+    canFire = true;
+}

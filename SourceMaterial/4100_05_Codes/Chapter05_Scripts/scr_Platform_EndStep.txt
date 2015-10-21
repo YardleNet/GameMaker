@@ -1,0 +1,6 @@
+if (obj_Player.y < y)
+{
+    solid = true;
+} else {
+    solid = false;
+}

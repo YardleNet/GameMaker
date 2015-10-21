@@ -1,0 +1,10 @@
+myHealth = 10;
+action = IDLEDOWN;
+facing = RIGHT;
+canFire = false;
+
+myIdleUp = spr_Cannon_IdleUp;
+myIdleDown = spr_Cannon_IdleDown;
+myRunUp = spr_Cannon_RunUp;
+myRunDown = spr_Cannon_RunDown;
+myDamage = spr_Cannon_Damage;

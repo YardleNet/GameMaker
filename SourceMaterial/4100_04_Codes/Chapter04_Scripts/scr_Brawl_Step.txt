@@ -1,0 +1,32 @@
+image_angle = direction;
+if (isBig == true)
+{
+    path_speed = mySpeed * 2;
+} else {
+    path_speed = mySpeed;
+}
+
+if (instance_exists(obj_Player))
+{
+    if (distance_to_object(obj_Player) <= 200) 
+    {
+        if (canGrow == false)
+        {
+            if (!collision_line(x, y, obj_Player.x, obj_Player.y, obj_Wall, false, true))
+            {
+                sprite_index = spr_Brawl_Change;
+                alarm[0] = 12;
+                canGrow = true;
+            }      
+        }
+    } 
+    else 
+    {
+        if (canGrow == true)
+        {
+            sprite_index = spr_Brawl_Change;
+            alarm[1] = 12;
+            canGrow = false;
+        }
+    }
+}

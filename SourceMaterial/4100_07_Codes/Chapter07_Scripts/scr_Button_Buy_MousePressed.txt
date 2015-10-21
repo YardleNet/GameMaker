@@ -1,0 +1,10 @@
+if (score > ds_grid_get(equip, myItem, COST))
+{
+    ds_grid_add(equip, myItem, AMOUNT, 1);
+    score -= ds_grid_get(equip, myItem, COST);
+    if (ds_list_find_index(inventory, myItem) == -1)
+    {
+        ds_list_add(inventory, myItem);
+    }
+    scr_GameSave(saveFile);
+}

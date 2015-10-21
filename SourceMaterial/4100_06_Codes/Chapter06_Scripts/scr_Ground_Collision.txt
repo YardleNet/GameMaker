@@ -1,0 +1,8 @@
+if (isActive)
+{
+    if (!isTapped)
+    {
+        sound_play(impact);
+        isTapped = true;
+    }
+}

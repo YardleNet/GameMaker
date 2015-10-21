@@ -1,0 +1,57 @@
+if (!keyLeft && !keyRight) 
+{
+    if (hspeed >= 1) { hspeed -= 1; }
+    if (hspeed <= -1) { hspeed += 1; }
+
+    if (keyUp) 
+    { 
+        action = IDLEUP; 
+        myAim = 45;
+    } else if (keyDown) {   
+        action = IDLEDOWN; 
+        myAim = 315;
+    } else { 
+        action = IDLE;
+        if (facing == LEFT) { myAim = 180; }
+        if (facing == RIGHT) { myAim = 0; }
+    }
+}
+
+if (keyLeft && canGoLeft)
+{
+    hspeed = -mySpeed;
+    facing = LEFT;
+    if (keyUp) 
+    { 
+        action = RUNUP; 
+        myAim = 150; 
+    } else if (keyDown) { 
+        action = RUNDOWN; 
+        myAim = 205; 
+    } else { 
+        action = RUN; 
+        myAim = 180; 
+    }
+}
+if (keyRight && canGoRight)
+{
+    hspeed = mySpeed;
+    facing = RIGHT;
+    if (keyUp) 
+    { 
+        action = RUNUP; 
+        myAim = 30;
+    } else if (keyDown) { 
+        action = RUNDOWN; 
+        myAim = 335;
+    } else { 
+        action = RUN; 
+        myAim = 0;
+    }
+}
+
+if (keyJump && isOnGround)
+{
+    vspeed = -MAXGRAVITY;
+    action = INAIR;
+}

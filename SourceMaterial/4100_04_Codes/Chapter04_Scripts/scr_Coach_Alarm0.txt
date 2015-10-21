@@ -1,0 +1,12 @@
+while (nextLocation == currentLocation)
+{
+    nextLocation = irandom(instance_number(obj_Trophy)-1);
+}
+
+target = instance_find(obj_Trophy, nextLocation);
+currentLocation = nextLocation;
+
+mp_grid_path(myPathGrid, myPath, x, y, target.x, target.y, false);
+path_start(myPath, mySpeed, 1, true);
+            
+isWaiting = false;

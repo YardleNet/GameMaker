@@ -1,0 +1,16 @@
+for (i = 1; i < 10; i += 1)
+{   
+    chain[i] = instance_create(x+(i * 16), y, obj_Chain);
+    chain[i].phy_active = false;
+}
+
+physics_joint_revolute_create(self, chain[1], self.x, self.y, 0, 0, false, 0, 0, false, false);
+
+for (i = 1; i < 9; i += 1)
+{    
+    physics_joint_revolute_create(chain[i], chain[i+1], chain[i].x, chain[i].y, -20, 20, true, 0, 0, false, false);
+}
+
+ball = instance_create(chain[9].x+24, y, obj_WreckingBall);
+ball.phy_active = false;
+physics_joint_revolute_create(chain[9], ball , chain[9].x, chain[9].y, -30, 30, true, 0, 0, false, false);

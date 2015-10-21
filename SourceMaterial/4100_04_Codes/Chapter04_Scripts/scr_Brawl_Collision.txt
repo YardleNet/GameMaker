@@ -1,0 +1,6 @@
+if (isAttacking == false)
+{
+    health -= 10;
+    alarm[2] = 60;
+    isAttacking = true;
+}

@@ -1,0 +1,18 @@
+draw_sprite(spr_Button_Shop, 0, shopX, menuItems_Y);
+if (win_Y > menuItems_Y - menuItem_Zone && win_Y < menuItems_Y + menuItem_Zone)
+{
+    if (win_X > shopX - menuItem_Zone*2 && win_X < shopX + menuItem_Zone*2)
+    {
+        draw_sprite(spr_Button_Shop, 1, shopX, menuItems_Y);
+        if (mouse_check_button_pressed(mb_left))
+        {        
+            if (!isGameActive) { scr_ScoreCleanUp();}
+            if (score < 0)
+            {
+                room_goto(GameOver);
+            } else {
+                room_goto(Shop);
+            }
+        }
+    }
+}

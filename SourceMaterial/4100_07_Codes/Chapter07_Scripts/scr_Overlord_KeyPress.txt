@@ -1,0 +1,9 @@
+if (isGameActive)
+{
+    isTriggered = true;
+}
+if (!isTimerStarted)
+{
+    obj_Menu.alarm[0] = room_speed;
+    isTimerStarted = true;
+}

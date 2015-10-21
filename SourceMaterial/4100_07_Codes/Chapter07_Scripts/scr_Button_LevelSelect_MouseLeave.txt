@@ -1,0 +1,6 @@
+if (isLocked)
+{   
+    exit;
+} else {
+    image_index = 0;
+}

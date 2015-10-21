@@ -1,0 +1,5 @@
+if (isHit == false)
+{
+    health -= 15;
+    isHit = true;
+}

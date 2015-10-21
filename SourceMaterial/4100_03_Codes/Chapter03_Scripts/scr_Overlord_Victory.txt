@@ -1,0 +1,7 @@
+timeline_running = false;
+with (obj_Enemy_Parent)
+{
+    instance_destroy();
+}
+alarm[1] = 90;
+isVictory = true;

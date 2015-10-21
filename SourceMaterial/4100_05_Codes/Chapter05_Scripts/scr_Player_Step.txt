@@ -1,0 +1,13 @@
+if (isDamaged)
+{
+    scr_Player_Damage();
+} else {
+    if (isOnGround)
+    {
+        scr_Player_GroundControls();
+    } else {
+        scr_Player_AirControls();
+    }
+    scr_Player_Attack(); 
+}
+scr_Animation_Control();

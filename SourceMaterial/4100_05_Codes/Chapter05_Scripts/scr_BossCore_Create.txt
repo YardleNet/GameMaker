@@ -1,0 +1,6 @@
+myHealth = 100;
+action = IDLE;
+facing = RIGHT;
+
+myIdle = spr_BossCore_Idle;
+myDamage = spr_BossCore_Damage;

@@ -1,0 +1,3 @@
+magnet = instance_create(x, y+160, obj_Magnet);
+magnet.phy_active = false;
+crane = physics_joint_prismatic_create(id, magnet, x, y, 0, 1, -128, 128, true, 100000, 20000, true, false);

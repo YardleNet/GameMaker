@@ -1,0 +1,2 @@
+global.lastRoom = room;
+room_goto(global.portalA);

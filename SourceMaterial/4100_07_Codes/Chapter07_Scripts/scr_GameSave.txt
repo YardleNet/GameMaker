@@ -1,0 +1,12 @@
+theFile = argument0;
+ini_open(theFile);
+ini_write_real("Score", "Cash", score);
+for (i = 0; i < totalLevels; i++)
+{
+    ini_write_string("Levels", string("Level_" + i), level[i, 1]);
+}
+for (j = 0; j < ds_grid_width(equip); j++)
+{
+    ini_write_real("Equipment", string("Equip_" + j), ds_grid_get(equip, j, AMOUNT));
+}
+ini_close(); 

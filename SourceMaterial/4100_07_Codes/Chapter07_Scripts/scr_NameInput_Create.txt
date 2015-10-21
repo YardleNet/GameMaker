@@ -1,0 +1,3 @@
+nameSpace = 0;
+nameMax = 8;
+

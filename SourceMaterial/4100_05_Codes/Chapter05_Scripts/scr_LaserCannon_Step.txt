@@ -1,0 +1,27 @@
+scr_Animation_Control();
+
+if (image_index > image_number-1)
+{
+    action = IDLE;
+}
+
+if (canFire)
+{
+    action = RUN;
+    alarm[0] = 5;
+    canFire = false;
+}
+
+if (myHealth <= 0)
+{
+    instance_destroy();
+}
+
+if (y < myBuffer)
+{
+    vspeed = mySpeed;
+}
+if (y > room_height - myBuffer)
+{
+    vspeed = -mySpeed;
+}

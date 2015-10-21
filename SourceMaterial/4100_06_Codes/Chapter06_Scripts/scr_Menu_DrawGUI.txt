@@ -1,0 +1,48 @@
+draw_sprite(spr_Menu_BG, 0, 0, 400);
+
+menuItem_Zone = 32;
+menuItems_Y = 440;
+menuItem1_X = 40;
+draw_sprite(spr_Menu_TNT, 0, menuItem1_X, menuItems_Y);
+
+menuItem2_X = 104;
+draw_sprite(spr_Menu_WreckingBall, 0, menuItem2_X, menuItems_Y);
+
+menuItem3_X = 168;
+draw_sprite(spr_Menu_MagneticCrane, 0, menuItem3_X, menuItems_Y);
+
+if (!isActive)
+{
+    win_X = window_mouse_get_x();
+    win_Y = window_mouse_get_y();
+    if ((win_Y > menuItems_Y - menuItem_Zone && win_Y < menuItems_Y + menuItem_Zone))
+    {
+        if ((win_X > menuItem1_X - menuItem_Zone && win_X < menuItem1_X + menuItem_Zone))
+        {
+            draw_sprite(spr_Menu_TNT, 1, menuItem1_X, menuItems_Y);
+            if (mouse_check_button_pressed(mb_left))
+            {        
+                instance_create(menuItem1_X, menuItems_Y, obj_Ghost_TNT);
+                isActive = true;
+            }
+        }
+        if ((win_X > menuItem2_X - menuItem_Zone && win_X < menuItem2_X + menuItem_Zone))
+        {
+            draw_sprite(spr_Menu_WreckingBall, 1, menuItem2_X, menuItems_Y);
+            if (mouse_check_button_pressed(mb_left))
+            {        
+                instance_create(menuItem1_X, menuItems_Y, obj_Ghost_WreckingBall);
+                isActive = true;
+            }
+        }
+        if ((win_X > menuItem3_X - menuItem_Zone && win_X < menuItem3_X + menuItem_Zone))
+        {
+            draw_sprite(spr_Menu_MagneticCrane, 1, menuItem3_X, menuItems_Y);
+            if (mouse_check_button_pressed(mb_left))
+            {        
+                instance_create(menuItem1_X, menuItems_Y, obj_Ghost_MagneticCrane);
+                isActive = true;
+            }
+        }
+    }
+}

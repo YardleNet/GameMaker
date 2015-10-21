@@ -1,0 +1,9 @@
+if ( lives < 0 && isDefeat == false) {
+    alarm[1] = 90;
+    isDefeat = true;
+}
+if ( isDefeat == true || isVictory == true )
+{
+    volume -= 0.02;
+    audio_master_gain(volume);
+}

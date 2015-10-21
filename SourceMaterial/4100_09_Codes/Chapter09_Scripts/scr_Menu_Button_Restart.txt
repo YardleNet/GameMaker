@@ -1,0 +1,14 @@
+draw_sprite(spr_Button_Restart, 0, restartX, menuItems_Y);
+if (win_Y > menuItems_Y - menuItem_Zone && win_Y < menuItems_Y + menuItem_Zone)
+{
+    if (win_X > restartX - menuItem_Zone && win_X < restartX + menuItem_Zone)
+    {
+        draw_sprite(spr_Button_Restart, 1, restartX, menuItems_Y);
+        if (mouse_check_button_pressed(mb_left))
+        {  
+            currentLevel = ds_grid_value_x(levelData, 0, LEVEL, totalLevels-1, LEVEL, myLevel);
+            ds_grid_add(levelData, currentLevel, ATTEMPTS, 1);             
+            room_restart();
+        }
+    }
+}

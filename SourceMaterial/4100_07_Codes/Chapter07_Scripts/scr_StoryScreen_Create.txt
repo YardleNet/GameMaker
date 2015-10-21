@@ -1,0 +1,9 @@
+isGameActive = false;
+screenX = 320;
+screenY = 200;
+startY = 440;
+startX = 320;
+start_ZoneWidth = 128;
+start_ZoneHeight = 32;
+myText = ds_map_find_value(dialogue, room);
+textLength = 0;

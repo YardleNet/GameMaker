@@ -1,0 +1,2 @@
+myDamage = 10;
+hspeed = -24;

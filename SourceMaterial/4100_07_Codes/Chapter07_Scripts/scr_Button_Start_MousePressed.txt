@@ -1,0 +1,6 @@
+if (room == MainMenu)
+{
+    saveFile = string(playerName + ".ini");
+    scr_GameLoad(saveFile);
+}
+room_goto(LevelSelect);

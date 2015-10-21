@@ -1,0 +1,7 @@
+for ( i = 0; i < ds_grid_width(equip); i++ )
+{
+    buyButton = instance_create(512, (96 * i) + 152, obj_Button_Buy);
+    buyButton.myItem = i;   
+}
+
+instance_create(502, 440, obj_Button_Start);

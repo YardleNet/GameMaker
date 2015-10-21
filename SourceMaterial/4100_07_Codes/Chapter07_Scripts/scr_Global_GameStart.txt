@@ -1,0 +1,12 @@
+score = 0;
+scr_Global_Levels();
+scr_Global_Colors();
+scr_Global_Equipment();
+scr_Global_Inventory();
+scr_Global_Gameplay();
+scr_Global_Dialogue();
+globalvar saveFile;
+saveFile = "Default.ini";
+scr_GameLoad(saveFile);
+globalvar playerName;
+playerName = "";

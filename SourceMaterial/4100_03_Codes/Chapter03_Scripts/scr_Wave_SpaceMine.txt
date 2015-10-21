@@ -1,0 +1,3 @@
+placeY = irandom_range(64, room_height - 64);
+instance_create(room_width - 64, placeY, obj_SpaceMine);
+

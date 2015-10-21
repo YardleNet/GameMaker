@@ -1,0 +1,6 @@
+if (action == IDLEUP)
+{
+    myHealth -= 10;
+    action = DAMAGE;
+    with (other) { instance_destroy(); }
+}

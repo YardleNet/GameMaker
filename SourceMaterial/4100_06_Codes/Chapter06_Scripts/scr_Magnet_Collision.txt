@@ -1,0 +1,2 @@
+physics_joint_prismatic_create(id, other, x, y, 0, 1, 0, 0, true, 0, 0, false, false);
+other.isCollected = true;

@@ -1,0 +1,6 @@
+sem = audio_emitter_create();
+audio_emitter_position(sem, x, y, 0);
+audio_emitter_falloff(sem, 96, 320, 1);
+audio_play_sound_on(sem, snd_Effect, true, 1);
+
+

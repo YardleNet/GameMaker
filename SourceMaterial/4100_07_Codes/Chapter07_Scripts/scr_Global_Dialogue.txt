@@ -1,0 +1,16 @@
+globalvar dialogue;
+dialogue = ds_map_create();
+ds_map_add(dialogue, Level_01, "Welcome to Destruct! A tower toppling game. 
+# Let's start with some basic training. Here we have a glass tower that needs to come down. You have one stick of TNT to use to completely clear the Zone. 
+# Let's see what you can do.");
+ds_map_add(dialogue, Level_02, "Temporary Dialogue for Level 02");
+ds_map_add(dialogue, Level_03, "Temporary Dialogue for Level 03");
+ds_map_add(dialogue, Level_04, "Temporary Dialogue for Level 04");
+ds_map_add(dialogue, Level_05, "Temporary Dialogue for Level 05");
+ds_map_add(dialogue, Level_06, "Temporary Dialogue for Level 06");
+ds_map_add(dialogue, Level_07, "Temporary Dialogue for Level 07");
+ds_map_add(dialogue, Level_08, "Temporary Dialogue for Level 08");
+ds_map_add(dialogue, Level_09, "Temporary Dialogue for Level 09");
+ds_map_add(dialogue, Level_10, "Temporary Dialogue for Level 10");
+ds_map_add(dialogue, Level_11, "Temporary Dialogue for Level 11");
+ds_map_add(dialogue, Level_12, "Temporary Dialogue for Level 12");

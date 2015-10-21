@@ -1,0 +1,3 @@
+globalvar isGameActive, isTimerStarted;
+isGameActive = true;
+isTimerStarted = false;

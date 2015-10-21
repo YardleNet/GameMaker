@@ -1,0 +1,36 @@
+switch (action)
+{
+    case IDLE :
+        sprite_index = myIdle;
+        image_speed = 0.1;
+    break;
+    case IDLEUP :
+        sprite_index = myIdleUp;
+        image_speed = 0.1;
+    break;
+    case IDLEDOWN :
+        sprite_index = myIdleDown;
+        image_speed = 0.1;
+    break;
+    case RUN :
+        sprite_index = myRun;
+        image_speed = 0.5;
+    break; 
+    case RUNUP :
+        sprite_index = myRunUp;
+        image_speed = 0.5;
+    break; 
+    case RUNDOWN :
+        sprite_index = myRunDown;
+        image_speed = 0.5;
+    break; 
+    case INAIR :
+        sprite_index = myInAir;
+        image_speed = 0.5;
+    break; 
+    case DAMAGE :
+        sprite_index = myDamage;
+        image_speed = 0.5;
+    break; 
+}
+image_xscale = facing;

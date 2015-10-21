@@ -1,0 +1,13 @@
+myDamage = 25;
+debris01 = obj_Debris_Steel_01;
+debris02 = obj_Debris_Steel_02;
+debris03 = obj_Debris_Steel_03;
+
+impact = snd_Impact_Steel;
+shatter = snd_Shatter_Steel;
+
+isTapped = false;
+isActive = false;
+alarm[0] = 30;
+
+isCollected = false;

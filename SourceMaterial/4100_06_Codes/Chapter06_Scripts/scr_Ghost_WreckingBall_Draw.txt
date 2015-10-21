@@ -1,0 +1,8 @@
+draw_set_alpha(0.5);
+draw_sprite(spr_Anchor,0, x, y)
+for (i = 1; i < 10; i += 1)
+{
+    draw_sprite(spr_Chain, -1, x + i*16, y)    
+}
+draw_sprite(spr_WreckingBall, -1, x + (9 * 16 + 24), y);
+draw_set_alpha(1);

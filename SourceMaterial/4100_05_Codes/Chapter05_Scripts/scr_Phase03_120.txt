@@ -1,0 +1,3 @@
+shieldUpper.isShielding = false;
+shieldLower.isShielding = false;
+gun.delay = 10;

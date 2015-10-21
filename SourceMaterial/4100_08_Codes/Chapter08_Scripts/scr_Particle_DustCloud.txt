@@ -1,0 +1,4 @@
+part_emitter_region(system, dustEmitter, x-10, x+10, y-10, y+10, ps_shape_ellipse, ps_distr_gaussian);
+part_emitter_burst(system, dustEmitter, myParticle, 8);
+part_emitter_burst(system, dustEmitter, particle_Dust, 10);
+

@@ -1,0 +1,18 @@
+isPhase_01 = true;
+isPhase_02 = false;
+isPhase_03 = false;
+isBossDefeated = false;
+
+boss_X = 672;
+gun = instance_create(32, 32, obj_Gun);
+cannonA = instance_create(boss_X, 48, obj_Cannon);
+cannonB = instance_create(boss_X, 176, obj_Cannon);
+cannonC = instance_create(boss_X, 304, obj_Cannon);
+laser = instance_create(boss_X, 352, obj_LaserCannon);
+core = instance_create(boss_X, 272, obj_BossCore);
+shieldUpper = instance_create(boss_X, 272, obj_Shield_Upper);
+shieldLower = instance_create(boss_X, 272, obj_Shield_Lower);
+
+timeline_index = tm_Boss_Phase01;
+timeline_running = true;
+timeline_loop = true;

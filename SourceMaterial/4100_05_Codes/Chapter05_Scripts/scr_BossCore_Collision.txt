@@ -1,0 +1,6 @@
+if (obj_Boss.isPhase_03 && action == IDLE)
+{
+    myHealth -= 2;
+    action = DAMAGE;
+    with (other) { instance_destroy(); }
+}

@@ -1,0 +1,9 @@
+if (keyShoot && canFire)
+{
+    bullet = instance_create(x + (8 * facing), y-32, obj_Bullet) 
+    bullet.speed = 16;
+    bullet.direction = myAim;
+    bullet.image_angle = myAim;
+    alarm[0] = 10;
+    canFire = false;
+}

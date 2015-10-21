@@ -1,0 +1,10 @@
+if (instance_exists(obj_Player))
+{  
+    if (distance_to_object(obj_Player) < myRange && hasSpawned == false)
+    {
+        ghost = instance_create(x, y, obj_Ghost);
+        ghost.myBooks = self.id;
+        sound_play(snd_GhostMoan);
+        hasSpawned = true;
+    }     
+}

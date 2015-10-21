@@ -1,0 +1,8 @@
+if (instance_exists(ghost))
+{
+    with (ghost)
+    {
+        instance_destroy();
+    }
+}
+instance_destroy();

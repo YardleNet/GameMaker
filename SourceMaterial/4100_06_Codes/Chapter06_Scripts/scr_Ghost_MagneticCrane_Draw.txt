@@ -1,0 +1,6 @@
+draw_set_alpha(0.5);
+draw_sprite(spr_CraneBase, 0, x, y)
+draw_set_color(c_dkgray);
+draw_line_width(x, y, x, y+144, 8);
+draw_sprite(spr_Magnet, 0, x, y+160);
+draw_set_alpha(1);

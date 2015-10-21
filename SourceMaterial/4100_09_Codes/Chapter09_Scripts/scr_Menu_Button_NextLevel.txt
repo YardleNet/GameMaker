@@ -1,0 +1,35 @@
+if (isVictory)
+{
+    draw_sprite(spr_Button_NextLevel, 0, nextLevelX, menuItems_Y);
+    if (win_Y > menuItems_Y - menuItem_Zone && win_Y < menuItems_Y + menuItem_Zone)
+    {
+        if (win_X > nextLevelX - menuItem_Zone && win_X < nextLevelX + menuItem_Zone)
+        {
+            draw_sprite(spr_Button_NextLevel, 1, nextLevelX, menuItems_Y);
+            if (mouse_check_button_pressed(mb_left))
+            {
+                for(i = 0; i < totalLevels; i++)
+                { 
+                    if (level[i, 0] == room)
+                    { 
+                        level[i+1, 1] = false;
+
+                        scr_ScoreCleanUp();
+                        currentLevel = ds_grid_value_x( levelData, 0, LEVEL, totalLevels-1, LEVEL, level[i+1,0] );
+                        ds_grid_add(levelData, currentLevel, ATTEMPTS, 1); 
+                        if (score < 0)
+                        {
+                            room_goto(GameOver);
+                        }
+                        else
+                        { 
+                            room_goto( level[i+1, 0] );
+                        }
+                        
+                    }
+                }    
+            }
+        }
+    }
+}
+

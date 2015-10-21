@@ -1,0 +1,2 @@
+beam = instance_create(x, y, obj_LaserBeam);
+beam.myLaserCannon = self.id;

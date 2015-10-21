@@ -1,0 +1,15 @@
+myIdle = spr_Player_Idle;
+myIdleUp = spr_Player_IdleUp;
+myIdleDown = spr_Player_IdleDown;
+myRun = spr_Player_Run;
+myRunUp = spr_Player_RunUp;
+myRunDown = spr_Player_RunDown;
+myInAir = spr_Player_InAir;
+myDamage = spr_Player_Damage;
+
+mySpeed = 8;
+myAim = 0;
+facing = RIGHT;
+action = IDLE;
+isDamaged = false;
+canFire = true;

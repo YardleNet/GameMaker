@@ -1,0 +1,1 @@
+physics_joint_set_value(crane, phy_joint_motor_speed, -20000);

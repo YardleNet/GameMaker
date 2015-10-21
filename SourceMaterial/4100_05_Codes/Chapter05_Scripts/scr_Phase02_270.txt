@@ -1,0 +1,1 @@
+with (laser.beam) { instance_destroy(); }

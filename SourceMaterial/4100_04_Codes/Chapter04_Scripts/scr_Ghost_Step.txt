@@ -1,0 +1,20 @@
+if (instance_exists(obj_Player))
+{
+    targetDist = distance_to_object(obj_Player)
+    if (targetDist < myRange)
+    {       
+        move_towards_point(obj_Player.x, obj_Player.y, mySpeed);
+    } else if (targetDist > myRange && distance_to_point(myBooks.x, myBooks.y) > 4) {      
+        move_towards_point(myBooks.x, myBooks.y, mySpeed);
+    } else {
+        speed = 0;
+        if (isDissolving == false)
+        {
+            myBooks.hasSpawned = false;
+            sprite_index = spr_Ghost_Spawn;
+            image_speed = -1;
+            alarm[1] = 6;
+            isDissolving = true;
+        }
+    }
+}

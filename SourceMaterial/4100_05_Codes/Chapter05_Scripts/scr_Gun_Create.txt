@@ -1,0 +1,9 @@
+action = IDLE;
+facing = RIGHT;
+tipOfGun = sprite_width;
+canFire = false;
+delay = 50;
+alarm[0] = delay;
+
+myIdle = spr_Gun_Idle;
+myRun = spr_Gun_Run;

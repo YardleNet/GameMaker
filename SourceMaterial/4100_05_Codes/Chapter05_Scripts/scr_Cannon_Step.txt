@@ -1,0 +1,19 @@
+scr_Animation_Control();
+
+if (image_index > image_number-1)
+{
+    if (action == RUNUP) { action = IDLEUP;}
+    else if (action == RUNDOWN) { action = IDLEDOWN;}
+}
+
+if (canFire) 
+{
+    action = RUNUP;
+    alarm[0] = 60;
+    canFire = false;
+}
+
+if (myHealth <= 0)
+{
+    instance_destroy();
+}

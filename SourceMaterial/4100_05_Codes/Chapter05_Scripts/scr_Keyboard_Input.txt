@@ -1,0 +1,6 @@
+keyLeft  = keyboard_check(vk_left);
+keyRight  = keyboard_check(vk_right); 
+keyDown  = keyboard_check(vk_down);
+keyUp  = keyboard_check(vk_up);
+keyJump = keyboard_check(ord('X'));
+keyShoot = keyboard_check(ord('Z'));
