@@ -4,19 +4,37 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_bgMusic</sound>
+    <sound>sound\snd_Collect</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_Wall</sprite>
     <sprite>sprites\spr_Player</sprite>
+    <sprite>sprites\spr_Collect</sprite>
+    <sprite>sprites\spr_Enemy</sprite>
   </sprites>
-  <backgrounds name="background"/>
-  <paths name="paths"/>
+  <backgrounds name="background">
+    <background>background\bg_Ground</background>
+  </backgrounds>
+  <paths name="paths">
+    <path>paths\pth_Enemy</path>
+  </paths>
+  <scripts name="scripts">
+    <script>scripts\scr_Player_Create.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_Impact</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_Wall</object>
     <object>objects\obj_Player</object>
+    <object>objects\obj_Overlord</object>
+    <object>objects\obj_Collect</object>
+    <object>objects\obj_Enemy</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_GameArea</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
