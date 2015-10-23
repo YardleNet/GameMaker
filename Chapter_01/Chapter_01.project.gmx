@@ -33,6 +33,9 @@
     <object>objects\obj_Collect</object>
     <object>objects\obj_Enemy</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tm_Spawn_Collectibles</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_GameArea</room>
   </rooms>
